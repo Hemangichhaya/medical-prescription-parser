@@ -1,0 +1,871 @@
+{
+  "num_images_evaluated": 6,
+  "missing_predictions": [],
+  "missing_ground_truth": [],
+  "avg_weighted_accuracy": 0.682,
+  "avg_hallucination_rate": 0.2608,
+  "avg_cer": null,
+  "avg_wer": null,
+  "calibration": {
+    "buckets": [
+      {
+        "range": "0.4-0.6",
+        "n": 13,
+        "accuracy": 0.6923
+      },
+      {
+        "range": "0.8-1.0",
+        "n": 4,
+        "accuracy": 1.0
+      }
+    ],
+    "needs_review_precision": 0.3077,
+    "needs_review_recall": 1.0
+  },
+  "per_image": {
+    "1": {
+      "weighted_accuracy": 0.6897,
+      "hallucination_rate": 0.2857,
+      "hallucinated_fields": [
+        {
+          "field": "frequency",
+          "line_id": 1,
+          "classification": "hallucinated",
+          "weight": 2.0
+        },
+        {
+          "field": "duration",
+          "line_id": 1,
+          "classification": "hallucinated",
+          "weight": 2.0
+        },
+        {
+          "field": "duration",
+          "line_id": 0,
+          "classification": "hallucinated",
+          "weight": 2.0
+        },
+        {
+          "field": "drug_name",
+          "line_id": 2,
+          "classification": "hallucinated",
+          "weight": 3.0
+        }
+      ],
+      "missed_fields": [],
+      "field_results": [
+        {
+          "field": "patient_name",
+          "line_id": null,
+          "classification": "correct",
+          "weight": 1.0
+        },
+        {
+          "field": "age",
+          "line_id": null,
+          "classification": "correct",
+          "weight": 1.0
+        },
+        {
+          "field": "drug_name",
+          "line_id": 1,
+          "classification": "correct",
+          "weight": 3.0
+        },
+        {
+          "field": "strength",
+          "line_id": 1,
+          "classification": "correct",
+          "weight": 2.0
+        },
+        {
+          "field": "frequency",
+          "line_id": 1,
+          "classification": "hallucinated",
+          "weight": 2.0
+        },
+        {
+          "field": "duration",
+          "line_id": 1,
+          "classification": "hallucinated",
+          "weight": 2.0
+        },
+        {
+          "field": "drug_name",
+          "line_id": 0,
+          "classification": "correct",
+          "weight": 3.0
+        },
+        {
+          "field": "strength",
+          "line_id": 0,
+          "classification": "correct_blank",
+          "weight": 2.0
+        },
+        {
+          "field": "frequency",
+          "line_id": 0,
+          "classification": "correct",
+          "weight": 2.0
+        },
+        {
+          "field": "duration",
+          "line_id": 0,
+          "classification": "hallucinated",
+          "weight": 2.0
+        },
+        {
+          "field": "drug_name",
+          "line_id": 2,
+          "classification": "hallucinated",
+          "weight": 3.0
+        },
+        {
+          "field": "strength",
+          "line_id": 2,
+          "classification": "correct",
+          "weight": 2.0
+        },
+        {
+          "field": "frequency",
+          "line_id": 2,
+          "classification": "correct",
+          "weight": 2.0
+        },
+        {
+          "field": "duration",
+          "line_id": 2,
+          "classification": "correct",
+          "weight": 2.0
+        }
+      ],
+      "cer": null,
+      "wer": null,
+      "calibration_points": [
+        {
+          "confidence": 0.85,
+          "correct": true,
+          "needs_review": false
+        },
+        {
+          "confidence": 0.85,
+          "correct": true,
+          "needs_review": false
+        },
+        {
+          "confidence": 0.45,
+          "correct": false,
+          "needs_review": true
+        }
+      ]
+    },
+    "2": {
+      "weighted_accuracy": 0.85,
+      "hallucination_rate": 0.2,
+      "hallucinated_fields": [
+        {
+          "field": "patient_name",
+          "line_id": null,
+          "classification": "hallucinated",
+          "weight": 1.0
+        },
+        {
+          "field": "frequency",
+          "line_id": 0,
+          "classification": "hallucinated",
+          "weight": 2.0
+        }
+      ],
+      "missed_fields": [],
+      "field_results": [
+        {
+          "field": "patient_name",
+          "line_id": null,
+          "classification": "hallucinated",
+          "weight": 1.0
+        },
+        {
+          "field": "age",
+          "line_id": null,
+          "classification": "correct",
+          "weight": 1.0
+        },
+        {
+          "field": "drug_name",
+          "line_id": 1,
+          "classification": "correct",
+          "weight": 3.0
+        },
+        {
+          "field": "strength",
+          "line_id": 1,
+          "classification": "correct",
+          "weight": 2.0
+        },
+        {
+          "field": "frequency",
+          "line_id": 1,
+          "classification": "correct",
+          "weight": 2.0
+        },
+        {
+          "field": "duration",
+          "line_id": 1,
+          "classification": "correct",
+          "weight": 2.0
+        },
+        {
+          "field": "drug_name",
+          "line_id": 0,
+          "classification": "correct",
+          "weight": 3.0
+        },
+        {
+          "field": "strength",
+          "line_id": 0,
+          "classification": "correct",
+          "weight": 2.0
+        },
+        {
+          "field": "frequency",
+          "line_id": 0,
+          "classification": "hallucinated",
+          "weight": 2.0
+        },
+        {
+          "field": "duration",
+          "line_id": 0,
+          "classification": "correct",
+          "weight": 2.0
+        }
+      ],
+      "cer": null,
+      "wer": null,
+      "calibration_points": [
+        {
+          "confidence": 0.475,
+          "correct": true,
+          "needs_review": true
+        },
+        {
+          "confidence": 0.88,
+          "correct": true,
+          "needs_review": false
+        }
+      ]
+    },
+    "3": {
+      "weighted_accuracy": 0.5526,
+      "hallucination_rate": 0.2222,
+      "hallucinated_fields": [
+        {
+          "field": "patient_name",
+          "line_id": null,
+          "classification": "hallucinated",
+          "weight": 1.0
+        },
+        {
+          "field": "drug_name",
+          "line_id": 1,
+          "classification": "hallucinated",
+          "weight": 3.0
+        },
+        {
+          "field": "frequency",
+          "line_id": 1,
+          "classification": "hallucinated",
+          "weight": 2.0
+        },
+        {
+          "field": "duration",
+          "line_id": 1,
+          "classification": "hallucinated",
+          "weight": 2.0
+        }
+      ],
+      "missed_fields": [
+        {
+          "field": "drug_name",
+          "line_id": null,
+          "classification": "missed",
+          "weight": 3.0
+        },
+        {
+          "field": "strength",
+          "line_id": null,
+          "classification": "missed",
+          "weight": 2.0
+        },
+        {
+          "field": "frequency",
+          "line_id": null,
+          "classification": "missed",
+          "weight": 2.0
+        },
+        {
+          "field": "duration",
+          "line_id": null,
+          "classification": "missed",
+          "weight": 2.0
+        }
+      ],
+      "field_results": [
+        {
+          "field": "patient_name",
+          "line_id": null,
+          "classification": "hallucinated",
+          "weight": 1.0
+        },
+        {
+          "field": "age",
+          "line_id": null,
+          "classification": "correct",
+          "weight": 1.0
+        },
+        {
+          "field": "drug_name",
+          "line_id": 2,
+          "classification": "correct",
+          "weight": 3.0
+        },
+        {
+          "field": "strength",
+          "line_id": 2,
+          "classification": "correct",
+          "weight": 2.0
+        },
+        {
+          "field": "frequency",
+          "line_id": 2,
+          "classification": "correct",
+          "weight": 2.0
+        },
+        {
+          "field": "duration",
+          "line_id": 2,
+          "classification": "correct",
+          "weight": 2.0
+        },
+        {
+          "field": "drug_name",
+          "line_id": 0,
+          "classification": "correct",
+          "weight": 3.0
+        },
+        {
+          "field": "strength",
+          "line_id": 0,
+          "classification": "correct",
+          "weight": 2.0
+        },
+        {
+          "field": "frequency",
+          "line_id": 0,
+          "classification": "correct",
+          "weight": 2.0
+        },
+        {
+          "field": "duration",
+          "line_id": 0,
+          "classification": "correct",
+          "weight": 2.0
+        },
+        {
+          "field": "drug_name",
+          "line_id": null,
+          "classification": "missed",
+          "weight": 3.0
+        },
+        {
+          "field": "strength",
+          "line_id": null,
+          "classification": "missed",
+          "weight": 2.0
+        },
+        {
+          "field": "frequency",
+          "line_id": null,
+          "classification": "missed",
+          "weight": 2.0
+        },
+        {
+          "field": "duration",
+          "line_id": null,
+          "classification": "missed",
+          "weight": 2.0
+        },
+        {
+          "field": "drug_name",
+          "line_id": 1,
+          "classification": "hallucinated",
+          "weight": 3.0
+        },
+        {
+          "field": "strength",
+          "line_id": 1,
+          "classification": "correct_blank",
+          "weight": 2.0
+        },
+        {
+          "field": "frequency",
+          "line_id": 1,
+          "classification": "hallucinated",
+          "weight": 2.0
+        },
+        {
+          "field": "duration",
+          "line_id": 1,
+          "classification": "hallucinated",
+          "weight": 2.0
+        }
+      ],
+      "cer": null,
+      "wer": null,
+      "calibration_points": [
+        {
+          "confidence": 0.45,
+          "correct": true,
+          "needs_review": true
+        },
+        {
+          "confidence": 0.85,
+          "correct": true,
+          "needs_review": false
+        },
+        {
+          "confidence": 0.425,
+          "correct": false,
+          "needs_review": true
+        }
+      ]
+    },
+    "4": {
+      "weighted_accuracy": 0.7241,
+      "hallucination_rate": 0.1429,
+      "hallucinated_fields": [
+        {
+          "field": "patient_name",
+          "line_id": null,
+          "classification": "hallucinated",
+          "weight": 1.0
+        },
+        {
+          "field": "drug_name",
+          "line_id": 2,
+          "classification": "hallucinated",
+          "weight": 3.0
+        }
+      ],
+      "missed_fields": [
+        {
+          "field": "strength",
+          "line_id": 0,
+          "classification": "missed",
+          "weight": 2.0
+        },
+        {
+          "field": "duration",
+          "line_id": 0,
+          "classification": "missed",
+          "weight": 2.0
+        }
+      ],
+      "field_results": [
+        {
+          "field": "patient_name",
+          "line_id": null,
+          "classification": "hallucinated",
+          "weight": 1.0
+        },
+        {
+          "field": "age",
+          "line_id": null,
+          "classification": "correct",
+          "weight": 1.0
+        },
+        {
+          "field": "drug_name",
+          "line_id": 0,
+          "classification": "correct",
+          "weight": 3.0
+        },
+        {
+          "field": "strength",
+          "line_id": 0,
+          "classification": "missed",
+          "weight": 2.0
+        },
+        {
+          "field": "frequency",
+          "line_id": 0,
+          "classification": "correct",
+          "weight": 2.0
+        },
+        {
+          "field": "duration",
+          "line_id": 0,
+          "classification": "missed",
+          "weight": 2.0
+        },
+        {
+          "field": "drug_name",
+          "line_id": 1,
+          "classification": "correct",
+          "weight": 3.0
+        },
+        {
+          "field": "strength",
+          "line_id": 1,
+          "classification": "correct",
+          "weight": 2.0
+        },
+        {
+          "field": "frequency",
+          "line_id": 1,
+          "classification": "correct",
+          "weight": 2.0
+        },
+        {
+          "field": "duration",
+          "line_id": 1,
+          "classification": "correct",
+          "weight": 2.0
+        },
+        {
+          "field": "drug_name",
+          "line_id": 2,
+          "classification": "hallucinated",
+          "weight": 3.0
+        },
+        {
+          "field": "strength",
+          "line_id": 2,
+          "classification": "correct",
+          "weight": 2.0
+        },
+        {
+          "field": "frequency",
+          "line_id": 2,
+          "classification": "correct",
+          "weight": 2.0
+        },
+        {
+          "field": "duration",
+          "line_id": 2,
+          "classification": "correct",
+          "weight": 2.0
+        }
+      ],
+      "cer": null,
+      "wer": null,
+      "calibration_points": [
+        {
+          "confidence": 0.45,
+          "correct": true,
+          "needs_review": true
+        },
+        {
+          "confidence": 0.475,
+          "correct": true,
+          "needs_review": true
+        },
+        {
+          "confidence": 0.425,
+          "correct": false,
+          "needs_review": true
+        }
+      ]
+    },
+    "5": {
+      "weighted_accuracy": 0.6552,
+      "hallucination_rate": 0.2857,
+      "hallucinated_fields": [
+        {
+          "field": "patient_name",
+          "line_id": null,
+          "classification": "hallucinated",
+          "weight": 1.0
+        },
+        {
+          "field": "frequency",
+          "line_id": 0,
+          "classification": "hallucinated",
+          "weight": 2.0
+        },
+        {
+          "field": "duration",
+          "line_id": 0,
+          "classification": "hallucinated",
+          "weight": 2.0
+        },
+        {
+          "field": "drug_name",
+          "line_id": 2,
+          "classification": "hallucinated",
+          "weight": 3.0
+        }
+      ],
+      "missed_fields": [
+        {
+          "field": "strength",
+          "line_id": 0,
+          "classification": "missed",
+          "weight": 2.0
+        }
+      ],
+      "field_results": [
+        {
+          "field": "patient_name",
+          "line_id": null,
+          "classification": "hallucinated",
+          "weight": 1.0
+        },
+        {
+          "field": "age",
+          "line_id": null,
+          "classification": "correct",
+          "weight": 1.0
+        },
+        {
+          "field": "drug_name",
+          "line_id": 1,
+          "classification": "correct",
+          "weight": 3.0
+        },
+        {
+          "field": "strength",
+          "line_id": 1,
+          "classification": "correct",
+          "weight": 2.0
+        },
+        {
+          "field": "frequency",
+          "line_id": 1,
+          "classification": "correct",
+          "weight": 2.0
+        },
+        {
+          "field": "duration",
+          "line_id": 1,
+          "classification": "correct",
+          "weight": 2.0
+        },
+        {
+          "field": "drug_name",
+          "line_id": 0,
+          "classification": "correct",
+          "weight": 3.0
+        },
+        {
+          "field": "strength",
+          "line_id": 0,
+          "classification": "missed",
+          "weight": 2.0
+        },
+        {
+          "field": "frequency",
+          "line_id": 0,
+          "classification": "hallucinated",
+          "weight": 2.0
+        },
+        {
+          "field": "duration",
+          "line_id": 0,
+          "classification": "hallucinated",
+          "weight": 2.0
+        },
+        {
+          "field": "drug_name",
+          "line_id": 2,
+          "classification": "hallucinated",
+          "weight": 3.0
+        },
+        {
+          "field": "strength",
+          "line_id": 2,
+          "classification": "correct",
+          "weight": 2.0
+        },
+        {
+          "field": "frequency",
+          "line_id": 2,
+          "classification": "correct",
+          "weight": 2.0
+        },
+        {
+          "field": "duration",
+          "line_id": 2,
+          "classification": "correct",
+          "weight": 2.0
+        }
+      ],
+      "cer": null,
+      "wer": null,
+      "calibration_points": [
+        {
+          "confidence": 0.475,
+          "correct": true,
+          "needs_review": true
+        },
+        {
+          "confidence": 0.45,
+          "correct": true,
+          "needs_review": true
+        },
+        {
+          "confidence": 0.425,
+          "correct": false,
+          "needs_review": true
+        }
+      ]
+    },
+    "6": {
+      "weighted_accuracy": 0.6207,
+      "hallucination_rate": 0.4286,
+      "hallucinated_fields": [
+        {
+          "field": "patient_name",
+          "line_id": null,
+          "classification": "hallucinated",
+          "weight": 1.0
+        },
+        {
+          "field": "strength",
+          "line_id": 2,
+          "classification": "hallucinated",
+          "weight": 2.0
+        },
+        {
+          "field": "frequency",
+          "line_id": 2,
+          "classification": "hallucinated",
+          "weight": 2.0
+        },
+        {
+          "field": "strength",
+          "line_id": 1,
+          "classification": "hallucinated",
+          "weight": 2.0
+        },
+        {
+          "field": "frequency",
+          "line_id": 1,
+          "classification": "hallucinated",
+          "weight": 2.0
+        },
+        {
+          "field": "frequency",
+          "line_id": 0,
+          "classification": "hallucinated",
+          "weight": 2.0
+        }
+      ],
+      "missed_fields": [],
+      "field_results": [
+        {
+          "field": "patient_name",
+          "line_id": null,
+          "classification": "hallucinated",
+          "weight": 1.0
+        },
+        {
+          "field": "age",
+          "line_id": null,
+          "classification": "correct",
+          "weight": 1.0
+        },
+        {
+          "field": "drug_name",
+          "line_id": 2,
+          "classification": "correct",
+          "weight": 3.0
+        },
+        {
+          "field": "strength",
+          "line_id": 2,
+          "classification": "hallucinated",
+          "weight": 2.0
+        },
+        {
+          "field": "frequency",
+          "line_id": 2,
+          "classification": "hallucinated",
+          "weight": 2.0
+        },
+        {
+          "field": "duration",
+          "line_id": 2,
+          "classification": "correct",
+          "weight": 2.0
+        },
+        {
+          "field": "drug_name",
+          "line_id": 1,
+          "classification": "correct",
+          "weight": 3.0
+        },
+        {
+          "field": "strength",
+          "line_id": 1,
+          "classification": "hallucinated",
+          "weight": 2.0
+        },
+        {
+          "field": "frequency",
+          "line_id": 1,
+          "classification": "hallucinated",
+          "weight": 2.0
+        },
+        {
+          "field": "duration",
+          "line_id": 1,
+          "classification": "correct",
+          "weight": 2.0
+        },
+        {
+          "field": "drug_name",
+          "line_id": 0,
+          "classification": "correct",
+          "weight": 3.0
+        },
+        {
+          "field": "strength",
+          "line_id": 0,
+          "classification": "correct_blank",
+          "weight": 2.0
+        },
+        {
+          "field": "frequency",
+          "line_id": 0,
+          "classification": "hallucinated",
+          "weight": 2.0
+        },
+        {
+          "field": "duration",
+          "line_id": 0,
+          "classification": "correct",
+          "weight": 2.0
+        }
+      ],
+      "cer": null,
+      "wer": null,
+      "calibration_points": [
+        {
+          "confidence": 0.45,
+          "correct": true,
+          "needs_review": true
+        },
+        {
+          "confidence": 0.45,
+          "correct": true,
+          "needs_review": true
+        },
+        {
+          "confidence": 0.475,
+          "correct": true,
+          "needs_review": true
+        }
+      ]
+    }
+  }
+}

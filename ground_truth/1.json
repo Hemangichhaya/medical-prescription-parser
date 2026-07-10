@@ -1,0 +1,31 @@
+{"1.jpg": {
+    "date": "28/3/23",
+    "patient_name": "Piyadasa",
+    "age": "65",
+    "gender": "M",
+    "medications": [
+        {
+        "drug_name": "Gaviscon",
+        "form": "syrup",
+        "strength": null,
+        "frequency": "TDS",
+        "dose": "1 cup",
+        "duration": "5 days"
+        },
+        {
+        "drug_name": "Nexium (Esomeprazole)",
+        "strength": "40 mg",
+        "frequency": "BD",
+        "duration": "5 days"
+        },
+        {
+        "drug_name": "Domitec (Domperidone)",
+        "strength": "10 mg",
+        "frequency": "TDS",
+        "duration": "5 days"
+        }
+    ],
+    "doctor": "Dr. M.V.G. de Silva, MBBS, DA(?)",
+    "hospital": "Hemas Hospital, Thalawathugoda - Emergency Treatment Unit"
+}
+}

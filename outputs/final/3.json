@@ -1,0 +1,180 @@
+{
+  "patient_name": "Gimhani",
+  "age": "63",
+  "date": null,
+  "doctor_name": "Dr. M. G. de Silva",
+  "hospital": "Hemas Hospital",
+  "medications": [
+    {
+      "line_id": 0,
+      "drug_name": "Augmentin",
+      "strength": "625 mg",
+      "frequency": "TDS",
+      "duration": "5/7",
+      "raw_line": "AUGMENTIN 625 mg TDS x 5/7",
+      "confidence": 0.95,
+      "drug_name_raw": "AUGMENTIN",
+      "drug_name_corrected": "Augmentin",
+      "frequency_raw": "TDS",
+      "duration_raw": "5/7",
+      "candidates_considered": [
+        "Augmentin",
+        "Augmentin Pill",
+        "Augmentin Injectable Product"
+      ],
+      "hybrid_scores": {
+        "Augmentin": 70.0,
+        "Augmentin Pill": 70.0,
+        "Augmentin Injectable Product": 70.0
+      },
+      "llm_confidence": 0.85,
+      "llm_reasoning": "The handwriting clearly says Augmentin 625mg TDS x 5/7.",
+      "needs_review": false,
+      "source_debug": [
+        {
+          "source": "rxnorm",
+          "status": "ok",
+          "candidate_count": 9,
+          "detail": "HTTP 200"
+        },
+        {
+          "source": "openfda",
+          "status": "ok",
+          "candidate_count": 4,
+          "detail": "HTTP 200"
+        },
+        {
+          "source": "drugs.com",
+          "status": "skipped",
+          "candidate_count": 0,
+          "detail": "earlier sources found candidates; fallback not needed"
+        },
+        {
+          "source": "1mg",
+          "status": "skipped",
+          "candidate_count": 0,
+          "detail": "earlier sources found candidates; fallback not needed"
+        }
+      ]
+    },
+    {
+      "line_id": 1,
+      "drug_name": "Xen-C",
+      "strength": null,
+      "frequency": "BD",
+      "duration": "1/52",
+      "raw_line": "Xen-C BD x 1/52",
+      "confidence": 0.85,
+      "drug_name_raw": "Xen-C",
+      "drug_name_corrected": "Xen-C",
+      "frequency_raw": "BD",
+      "duration_raw": "1/52",
+      "candidates_considered": [
+        "XEN-D0501"
+      ],
+      "hybrid_scores": {
+        "XEN-D0501": 62.22
+      },
+      "llm_confidence": 0.425,
+      "llm_reasoning": "The handwriting reads 'Xen-C' with a frequency of 'BD' (twice a day) for '1/52' (one week).",
+      "needs_review": true,
+      "source_debug": [
+        {
+          "source": "rxnorm",
+          "status": "ok",
+          "candidate_count": 3,
+          "detail": "HTTP 200"
+        },
+        {
+          "source": "openfda",
+          "status": "ok",
+          "candidate_count": 0,
+          "detail": "HTTP 404 (no matches)"
+        },
+        {
+          "source": "drugs.com",
+          "status": "skipped",
+          "candidate_count": 0,
+          "detail": "earlier sources found candidates; fallback not needed"
+        },
+        {
+          "source": "1mg",
+          "status": "skipped",
+          "candidate_count": 0,
+          "detail": "earlier sources found candidates; fallback not needed"
+        }
+      ]
+    },
+    {
+      "line_id": 2,
+      "drug_name": "Panadol",
+      "strength": "1 g",
+      "frequency": "TDS",
+      "duration": "5/7",
+      "raw_line": "PANMOL 1 g TDS x 5/7",
+      "confidence": 0.85,
+      "drug_name_raw": "PANMOL",
+      "drug_name_corrected": "Panadol",
+      "frequency_raw": "TDS",
+      "duration_raw": "5/7",
+      "candidates_considered": [
+        "TRIPTERYGIUM WILFORDII WHOLE 28 g in 100 mL TOPICAL LIQUID [PAMO Kill Natural]",
+        "GINKGO BILOBA LEAF OIL 1 g in 100 mL TOPICAL LIQUID [PAMO Kill Natural]"
+      ],
+      "hybrid_scores": {
+        "TRIPTERYGIUM WILFORDII WHOLE 28 g in 100 mL TOPICAL LIQUID [PAMO Kill Natural]": 46.67,
+        "GINKGO BILOBA LEAF OIL 1 g in 100 mL TOPICAL LIQUID [PAMO Kill Natural]": 46.67
+      },
+      "llm_confidence": 0.45,
+      "llm_reasoning": "The handwriting clearly says 'Panadol 1g TDS x 5/7', which is a standard prescription for paracetamol.",
+      "needs_review": true,
+      "source_debug": [
+        {
+          "source": "rxnorm",
+          "status": "ok",
+          "candidate_count": 0,
+          "detail": "HTTP 200"
+        },
+        {
+          "source": "openfda",
+          "status": "ok",
+          "candidate_count": 0,
+          "detail": "HTTP 404 (no matches)"
+        },
+        {
+          "source": "rxnorm_spelling",
+          "status": "ok",
+          "candidate_count": 0,
+          "detail": "HTTP 200"
+        },
+        {
+          "source": "rxnorm",
+          "status": "ok",
+          "candidate_count": 2,
+          "detail": "HTTP 200"
+        },
+        {
+          "source": "rxnorm_spelling",
+          "status": "ok",
+          "candidate_count": 0,
+          "detail": "HTTP 200"
+        },
+        {
+          "source": "drugs.com",
+          "status": "skipped",
+          "candidate_count": 0,
+          "detail": "earlier sources found candidates; fallback not needed"
+        },
+        {
+          "source": "1mg",
+          "status": "skipped",
+          "candidate_count": 0,
+          "detail": "earlier sources found candidates; fallback not needed"
+        }
+      ]
+    }
+  ],
+  "patient_name_confidence": 0.8,
+  "age_confidence": 0.9,
+  "_cost_usd": 0.00200375
+}

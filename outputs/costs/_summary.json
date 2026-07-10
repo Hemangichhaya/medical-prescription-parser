@@ -1,0 +1,14 @@
+{
+  "num_images": 6,
+  "total_cost_usd": 0.011699,
+  "avg_cost_per_image_usd": 0.00195,
+  "breakdown_by_stage_total_usd": {
+    "vision_extraction": 0.005896,
+    "correction": 0.00580325
+  },
+  "projection_usd": {
+    "1000": 1.95,
+    "10000": 19.5,
+    "100000": 194.99
+  }
+}

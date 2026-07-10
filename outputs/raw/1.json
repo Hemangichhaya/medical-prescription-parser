@@ -1,0 +1,45 @@
+{
+  "patient_name": "Riyadasa",
+  "age": "65",
+  "date": "28/3/23",
+  "doctor_name": null,
+  "hospital": "HEMAS HOSPITAL",
+  "medications": [
+    {
+      "line_id": 0,
+      "drug_name": "SY. GAVISCON D-S",
+      "strength": null,
+      "frequency": "TDS",
+      "duration": "7/7",
+      "raw_line": "SY. GAVISCON D-S 15ml TDS x 7/7",
+      "confidence": 0.9
+    },
+    {
+      "line_id": 1,
+      "drug_name": "NEXIUM",
+      "strength": "40 mg",
+      "frequency": "OD",
+      "duration": "7/7",
+      "raw_line": "NEXIUM 40 mg OD x 7/7",
+      "confidence": 0.95
+    },
+    {
+      "line_id": 2,
+      "drug_name": "DOMITEC",
+      "strength": "10 mg",
+      "frequency": "TDS",
+      "duration": "5/7",
+      "raw_line": "DOMITEC 10 mg TDS x 5/7",
+      "confidence": 0.95
+    }
+  ],
+  "patient_name_confidence": 0.85,
+  "age_confidence": 0.95,
+  "_metrics": {
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "stage": "raw_extraction",
+    "latency_ms": 1808.88,
+    "image_path": "Handwritten Docs\\1.jpg"
+  }
+}

@@ -1,0 +1,30 @@
+{
+    "5.jpg": {
+    "date": "31/4/23",
+    "patient_name": "Shavner Perera",
+    "age": "61",
+    "gender": "M",
+    "medications": [
+      {
+        "drug_name": "Voltaren (Diclofenac)",
+        "strength": "60 mg",
+        "frequency": "BD",
+        "duration": "3 days"
+      },
+      {
+        "drug_name": "Celox-R",
+        "strength": "200 mg",
+        "frequency": "BD",
+        "duration": "5 days"
+      },
+      {
+        "drug_name": "Panadol (Paracetamol)",
+        "strength": "1 g",
+        "frequency": "TDS",
+        "duration": "5 days"
+      }
+    ],
+    "doctor": "Dr. M.V.G. de Silva, MBBS, DA(?)",
+    "hospital": "Hemas Hospital, Thalawathugoda - Emergency Treatment Unit"
+  }
+}

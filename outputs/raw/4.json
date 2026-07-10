@@ -1,0 +1,45 @@
+{
+  "patient_name": "Rufo Gusekene",
+  "age": "48",
+  "date": "2/5/23",
+  "doctor_name": "Dr. H. S. L. K. D. S.",
+  "hospital": "Hemas Hospital",
+  "medications": [
+    {
+      "line_id": 0,
+      "drug_name": "ZOLUITRUPTM (20LM)",
+      "strength": null,
+      "frequency": "PRN",
+      "duration": null,
+      "raw_line": "ZOLUITRUPTM (20LM) PRN",
+      "confidence": 0.6
+    },
+    {
+      "line_id": 1,
+      "drug_name": "PANMOL",
+      "strength": "1 g",
+      "frequency": "TDS",
+      "duration": "5/7",
+      "raw_line": "PANMOL 1 g TDS x 5/7",
+      "confidence": 0.9
+    },
+    {
+      "line_id": 2,
+      "drug_name": "DOMITOR",
+      "strength": "10 mg",
+      "frequency": "OD",
+      "duration": "3/7",
+      "raw_line": "DOMITOR 10 mg OD x 3/7",
+      "confidence": 0.9
+    }
+  ],
+  "patient_name_confidence": 0.8,
+  "age_confidence": 0.9,
+  "_metrics": {
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "stage": "raw_extraction",
+    "latency_ms": 1888.16,
+    "image_path": "Handwritten Docs\\4.jpg"
+  }
+}

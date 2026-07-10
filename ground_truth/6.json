@@ -1,0 +1,31 @@
+{
+    "6.jpg": {
+    "date": "21/8/23",
+    "patient_name": "Sarath Perera",
+    "age": "46",
+    "gender": "M",
+    "medications": [
+      {
+        "drug_name": "Becosules",
+        "strength": null,
+        "form": "capsule",
+        "frequency": "Nocte",
+        "duration": "2 weeks"
+      },
+      {
+        "drug_name": "D-Plus",
+        "strength": "5000 IU",
+        "frequency": "Nocte",
+        "duration": "2 weeks"
+      },
+      {
+        "drug_name": "Kalzana",
+        "strength": "500 mg",
+        "frequency": "Nocte",
+        "duration": "2 weeks"
+      }
+    ],
+    "doctor": "Dr. M.V.G. de Silva, MBBS, DA(II)",
+    "hospital": "Hemas Hospital, Thalawathugoda - Emergency Treatment Unit"
+  }
+}

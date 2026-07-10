@@ -1,0 +1,182 @@
+{
+  "patient_name": "Riyadasa",
+  "age": "65",
+  "date": "28/3/23",
+  "doctor_name": null,
+  "hospital": "HEMAS HOSPITAL",
+  "medications": [
+    {
+      "line_id": 0,
+      "drug_name": "Gaviscon",
+      "strength": null,
+      "frequency": "TDS",
+      "duration": "7/7",
+      "raw_line": "SY. GAVISCON D-S 15ml TDS x 7/7",
+      "confidence": 0.9,
+      "drug_name_raw": "SY. GAVISCON D-S",
+      "drug_name_corrected": "Gaviscon",
+      "frequency_raw": "TDS",
+      "duration_raw": "7/7",
+      "candidates_considered": [
+        "Gaviscon",
+        "Gaviscon Chewable",
+        "Gaviscon Pill"
+      ],
+      "hybrid_scores": {
+        "Gaviscon": 70.0,
+        "Gaviscon Chewable": 50.4,
+        "Gaviscon Pill": 50.4
+      },
+      "llm_confidence": 0.85,
+      "llm_reasoning": "The handwriting clearly says 'SY. GAVISCON D-S' (likely Gaviscon Double Action Suspension), with 15ml TDS for 7 days.",
+      "needs_review": false,
+      "source_debug": [
+        {
+          "source": "rxnorm",
+          "status": "ok",
+          "candidate_count": 10,
+          "detail": "HTTP 200"
+        },
+        {
+          "source": "openfda",
+          "status": "ok",
+          "candidate_count": 0,
+          "detail": "HTTP 404 (no matches)"
+        },
+        {
+          "source": "drugs.com",
+          "status": "skipped",
+          "candidate_count": 0,
+          "detail": "earlier sources found candidates; fallback not needed"
+        },
+        {
+          "source": "1mg",
+          "status": "skipped",
+          "candidate_count": 0,
+          "detail": "earlier sources found candidates; fallback not needed"
+        }
+      ]
+    },
+    {
+      "line_id": 1,
+      "drug_name": "NEXIUM",
+      "strength": "40 mg",
+      "frequency": "OD",
+      "duration": "7/7",
+      "raw_line": "NEXIUM 40 mg OD x 7/7",
+      "confidence": 0.95,
+      "drug_name_raw": "NEXIUM",
+      "drug_name_corrected": "NEXIUM",
+      "frequency_raw": "OD",
+      "duration_raw": "7/7",
+      "candidates_considered": [
+        "NEXIUM",
+        "Nexium Pill",
+        "esomeprazole Injection [Nexium]"
+      ],
+      "hybrid_scores": {
+        "NEXIUM": 70.0,
+        "Nexium Pill": 70.0,
+        "esomeprazole Injection [Nexium]": 70.0
+      },
+      "llm_confidence": 0.85,
+      "llm_reasoning": "The handwriting clearly indicates Nexium 40mg OD for 7 days.",
+      "needs_review": false,
+      "source_debug": [
+        {
+          "source": "rxnorm",
+          "status": "ok",
+          "candidate_count": 15,
+          "detail": "HTTP 200"
+        },
+        {
+          "source": "openfda",
+          "status": "ok",
+          "candidate_count": 22,
+          "detail": "HTTP 200"
+        },
+        {
+          "source": "drugs.com",
+          "status": "skipped",
+          "candidate_count": 0,
+          "detail": "earlier sources found candidates; fallback not needed"
+        },
+        {
+          "source": "1mg",
+          "status": "skipped",
+          "candidate_count": 0,
+          "detail": "earlier sources found candidates; fallback not needed"
+        }
+      ]
+    },
+    {
+      "line_id": 2,
+      "drug_name": "DOMPERIDONE",
+      "strength": "10 mg",
+      "frequency": "TDS",
+      "duration": "5/7",
+      "raw_line": "DOMITEC 10 mg TDS x 5/7",
+      "confidence": 0.95,
+      "drug_name_raw": "DOMITEC",
+      "drug_name_corrected": "DOMPERIDONE",
+      "frequency_raw": "TDS",
+      "duration_raw": "5/7",
+      "candidates_considered": [
+        "dolomite"
+      ],
+      "hybrid_scores": {
+        "dolomite": 58.33
+      },
+      "llm_confidence": 0.45,
+      "llm_reasoning": "The handwriting reads 'DOMITEC', which is a brand name for Domperidone; the frequency is TDS and duration is 5/7.",
+      "needs_review": true,
+      "source_debug": [
+        {
+          "source": "rxnorm",
+          "status": "ok",
+          "candidate_count": 0,
+          "detail": "HTTP 200"
+        },
+        {
+          "source": "openfda",
+          "status": "ok",
+          "candidate_count": 0,
+          "detail": "HTTP 404 (no matches)"
+        },
+        {
+          "source": "rxnorm_spelling",
+          "status": "ok",
+          "candidate_count": 0,
+          "detail": "HTTP 200"
+        },
+        {
+          "source": "rxnorm",
+          "status": "ok",
+          "candidate_count": 1,
+          "detail": "HTTP 200"
+        },
+        {
+          "source": "rxnorm_spelling",
+          "status": "ok",
+          "candidate_count": 1,
+          "detail": "HTTP 200"
+        },
+        {
+          "source": "drugs.com",
+          "status": "skipped",
+          "candidate_count": 0,
+          "detail": "earlier sources found candidates; fallback not needed"
+        },
+        {
+          "source": "1mg",
+          "status": "skipped",
+          "candidate_count": 0,
+          "detail": "earlier sources found candidates; fallback not needed"
+        }
+      ]
+    }
+  ],
+  "patient_name_confidence": 0.85,
+  "age_confidence": 0.95,
+  "_cost_usd": 0.0020215
+}

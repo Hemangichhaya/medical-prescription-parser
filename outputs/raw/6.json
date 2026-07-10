@@ -1,0 +1,45 @@
+{
+  "patient_name": "Serew Pemo",
+  "age": "46",
+  "date": "21/8/23",
+  "doctor_name": null,
+  "hospital": "HEMAS HOSPITAL",
+  "medications": [
+    {
+      "line_id": 0,
+      "drug_name": "BECOGULES",
+      "strength": null,
+      "frequency": "1 cap day",
+      "duration": "2/2",
+      "raw_line": "BECOGULES 1 cap day x 2/2",
+      "confidence": 0.9
+    },
+    {
+      "line_id": 1,
+      "drug_name": "D-PLVS",
+      "strength": "5000",
+      "frequency": "day",
+      "duration": "2/2",
+      "raw_line": "D-PLVS 5000 day x 2/2",
+      "confidence": 0.7
+    },
+    {
+      "line_id": 2,
+      "drug_name": "KALZANA",
+      "strength": "500",
+      "frequency": "day",
+      "duration": "2/2",
+      "raw_line": "KALZANA 500 day x 2/2",
+      "confidence": 0.8
+    }
+  ],
+  "patient_name_confidence": 0.6,
+  "age_confidence": 0.8,
+  "_metrics": {
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "stage": "raw_extraction",
+    "latency_ms": 1845.42,
+    "image_path": "Handwritten Docs\\6.jpg"
+  }
+}

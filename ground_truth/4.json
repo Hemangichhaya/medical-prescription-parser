@@ -1,0 +1,30 @@
+{
+    "4.jpg": {
+    "date": "2/5/23",
+    "patient_name": "Ruwan Gunasekara",
+    "age": "48",
+    "gender": "M",
+    "medications": [
+      {
+        "drug_name": "Zolmitriptan (Zolmn)",
+        "strength": "2.5 mg",
+        "frequency": "PRN",
+        "duration": "4 tablets"
+      },
+      {
+        "drug_name": "Panamol (Paracetamol)",
+        "strength": "1 g",
+        "frequency": "TDS",
+        "duration": "5 days"
+      },
+      {
+        "drug_name": "Domitor (Domperidone)",
+        "strength": "10 mg",
+        "frequency": "BD",
+        "duration": "3 days"
+      }
+    ],
+    "doctor": "Dr. M.V.G. de Silva, MBBS, DA(II)",
+    "hospital": "Hemas Hospital, Thalawathugoda - Emergency Treatment Unit"
+  }
+}

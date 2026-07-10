@@ -1,0 +1,26 @@
+{
+  "image_path": "Handwritten Docs\\5.jpg",
+  "total_cost_usd": 0.00197125,
+  "breakdown_by_stage": {
+    "vision_extraction": 0.00098475,
+    "correction": 0.0009865
+  },
+  "events": [
+    {
+      "stage": "vision_extraction",
+      "model": "gemini-3.1-flash-lite",
+      "input_tokens": 1857,
+      "output_tokens": 347,
+      "cost_usd": 0.00098475,
+      "estimated": false
+    },
+    {
+      "stage": "correction",
+      "model": "gemini-3.1-flash-lite",
+      "input_tokens": 2062,
+      "output_tokens": 314,
+      "cost_usd": 0.0009865,
+      "estimated": false
+    }
+  ]
+}

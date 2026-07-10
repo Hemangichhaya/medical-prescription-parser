@@ -1,0 +1,45 @@
+{
+  "patient_name": "Shovner",
+  "age": "61",
+  "date": "31/07/23",
+  "doctor_name": null,
+  "hospital": "HEMAS HOSPITAL",
+  "medications": [
+    {
+      "line_id": 0,
+      "drug_name": "VOLIM2N",
+      "strength": null,
+      "frequency": "TDS",
+      "duration": null,
+      "raw_line": "VOLIM2N 602 (C) TDS 1-1-1",
+      "confidence": 0.6
+    },
+    {
+      "line_id": 1,
+      "drug_name": "CELOX-R",
+      "strength": "200 mg",
+      "frequency": "BD",
+      "duration": null,
+      "raw_line": "CELOX-R 200 mg BD",
+      "confidence": 0.85
+    },
+    {
+      "line_id": 2,
+      "drug_name": "P MTMOTNS",
+      "strength": "1 g",
+      "frequency": "TDS",
+      "duration": null,
+      "raw_line": "P MTMOTNS 1 g TDS",
+      "confidence": 0.4
+    }
+  ],
+  "patient_name_confidence": 0.8,
+  "age_confidence": 0.9,
+  "_metrics": {
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "stage": "raw_extraction",
+    "latency_ms": 1955.03,
+    "image_path": "Handwritten Docs\\5.jpg"
+  }
+}

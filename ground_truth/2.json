@@ -1,0 +1,24 @@
+{
+    "2.jpg": {
+    "date": "03/4/23",
+    "patient_name": "Shalika Gunadasa",
+    "age": "28",
+    "gender": "F",
+    "medications": [
+      {
+        "drug_name": "Ponstan (Mefenamic acid)",
+        "strength": "500 mg",
+        "frequency": "BD",
+        "duration": "3 days"
+      },
+      {
+        "drug_name": "Panadol (Paracetamol)",
+        "strength": "1 g",
+        "frequency": "TDS",
+        "duration": "3 days"
+      }
+    ],
+    "doctor": "Dr. M.V.G. de Silva, MBBS, DA(?)",
+    "hospital": "Hemas Hospital, Thalawathugoda - Emergency Treatment Unit"
+  }
+}

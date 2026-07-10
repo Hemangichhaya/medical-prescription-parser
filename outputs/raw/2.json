@@ -1,0 +1,36 @@
+{
+  "patient_name": "Shalika",
+  "age": "28",
+  "date": "03/4/23",
+  "doctor_name": null,
+  "hospital": "HEMAS HOSPITAL",
+  "medications": [
+    {
+      "line_id": 0,
+      "drug_name": "PONSTAN",
+      "strength": "500 mg",
+      "frequency": "TDS",
+      "duration": "3/7",
+      "raw_line": "PONSTAN 500 mg TDS x 3/7",
+      "confidence": 0.9
+    },
+    {
+      "line_id": 1,
+      "drug_name": "PANMOL",
+      "strength": "1 g",
+      "frequency": "TDS",
+      "duration": "3/7",
+      "raw_line": "PANMOL 1 g TDS x 3/7",
+      "confidence": 0.9
+    }
+  ],
+  "patient_name_confidence": 0.85,
+  "age_confidence": 0.9,
+  "_metrics": {
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "stage": "raw_extraction",
+    "latency_ms": 1471.44,
+    "image_path": "Handwritten Docs\\2.jpg"
+  }
+}

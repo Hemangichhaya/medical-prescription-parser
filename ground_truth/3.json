@@ -1,0 +1,30 @@
+{
+    "3.jpg": {
+    "date": null,
+    "patient_name": "Gunatilaka Perera",
+    "age": "63",
+    "gender": "M",
+    "medications": [
+      {
+        "drug_name": "Augmentin (Amoxicillin-Clavulanate)",
+        "strength": "625 mg",
+        "frequency": "TDS",
+        "duration": "5 days"
+      },
+      {
+        "drug_name": "Vitamin C",
+        "strength": "500 mg",
+        "frequency": "Nocte",
+        "duration": "not specified"
+      },
+      {
+        "drug_name": "Panadol (Paracetamol)",
+        "strength": "1 g",
+        "frequency": "TDS",
+        "duration": "5 days"
+      }
+    ],
+    "doctor": "Dr. M.V.G. de Silva, MBBS, DA(?)",
+    "hospital": "Hemas Hospital, Thalawathugoda - Emergency Treatment Unit"
+  }
+}

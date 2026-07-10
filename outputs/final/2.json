@@ -1,0 +1,132 @@
+{
+  "patient_name": "Shalika",
+  "age": "28",
+  "date": "03/4/23",
+  "doctor_name": null,
+  "hospital": "HEMAS HOSPITAL",
+  "medications": [
+    {
+      "line_id": 0,
+      "drug_name": "Ponstan",
+      "strength": "500 mg",
+      "frequency": "TDS",
+      "duration": "3/7",
+      "raw_line": "PONSTAN 500 mg TDS x 3/7",
+      "confidence": 0.9,
+      "drug_name_raw": "PONSTAN",
+      "drug_name_corrected": "Ponstan",
+      "frequency_raw": "TDS",
+      "duration_raw": "3/7",
+      "candidates_considered": [
+        "Ponstan",
+        "Ponstan Pill",
+        "Ponstan Oral Product"
+      ],
+      "hybrid_scores": {
+        "Ponstan": 70.0,
+        "Ponstan Pill": 70.0,
+        "Ponstan Oral Product": 70.0
+      },
+      "llm_confidence": 0.88,
+      "llm_reasoning": "The handwriting clearly says Ponstan 500mg, with TDS frequency and 3/7 duration.",
+      "needs_review": false,
+      "source_debug": [
+        {
+          "source": "rxnorm",
+          "status": "ok",
+          "candidate_count": 18,
+          "detail": "HTTP 200"
+        },
+        {
+          "source": "openfda",
+          "status": "ok",
+          "candidate_count": 0,
+          "detail": "HTTP 404 (no matches)"
+        },
+        {
+          "source": "drugs.com",
+          "status": "skipped",
+          "candidate_count": 0,
+          "detail": "earlier sources found candidates; fallback not needed"
+        },
+        {
+          "source": "1mg",
+          "status": "skipped",
+          "candidate_count": 0,
+          "detail": "earlier sources found candidates; fallback not needed"
+        }
+      ]
+    },
+    {
+      "line_id": 1,
+      "drug_name": "Panadol",
+      "strength": "1 g",
+      "frequency": "TDS",
+      "duration": "3/7",
+      "raw_line": "PANMOL 1 g TDS x 3/7",
+      "confidence": 0.9,
+      "drug_name_raw": "PANMOL",
+      "drug_name_corrected": "Panadol",
+      "frequency_raw": "TDS",
+      "duration_raw": "3/7",
+      "candidates_considered": [
+        "TRIPTERYGIUM WILFORDII WHOLE 28 g in 100 mL TOPICAL LIQUID [PAMO Kill Natural]",
+        "GINKGO BILOBA LEAF OIL 1 g in 100 mL TOPICAL LIQUID [PAMO Kill Natural]"
+      ],
+      "hybrid_scores": {
+        "TRIPTERYGIUM WILFORDII WHOLE 28 g in 100 mL TOPICAL LIQUID [PAMO Kill Natural]": 46.67,
+        "GINKGO BILOBA LEAF OIL 1 g in 100 mL TOPICAL LIQUID [PAMO Kill Natural]": 46.67
+      },
+      "llm_confidence": 0.475,
+      "llm_reasoning": "The handwriting reads 'Panmol' or 'Panadol' (a common brand for Paracetamol); 'Panmol' is clearly written, and the candidates provided were incorrect.",
+      "needs_review": true,
+      "source_debug": [
+        {
+          "source": "rxnorm",
+          "status": "ok",
+          "candidate_count": 0,
+          "detail": "HTTP 200"
+        },
+        {
+          "source": "openfda",
+          "status": "ok",
+          "candidate_count": 0,
+          "detail": "HTTP 404 (no matches)"
+        },
+        {
+          "source": "rxnorm_spelling",
+          "status": "ok",
+          "candidate_count": 0,
+          "detail": "HTTP 200"
+        },
+        {
+          "source": "rxnorm",
+          "status": "ok",
+          "candidate_count": 2,
+          "detail": "HTTP 200"
+        },
+        {
+          "source": "rxnorm_spelling",
+          "status": "ok",
+          "candidate_count": 0,
+          "detail": "HTTP 200"
+        },
+        {
+          "source": "drugs.com",
+          "status": "skipped",
+          "candidate_count": 0,
+          "detail": "earlier sources found candidates; fallback not needed"
+        },
+        {
+          "source": "1mg",
+          "status": "skipped",
+          "candidate_count": 0,
+          "detail": "earlier sources found candidates; fallback not needed"
+        }
+      ]
+    }
+  ],
+  "patient_name_confidence": 0.85,
+  "age_confidence": 0.9,
+  "_cost_usd": 0.00169475
+}

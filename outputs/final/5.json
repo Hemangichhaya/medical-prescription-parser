@@ -1,0 +1,178 @@
+{
+  "patient_name": "Shovner",
+  "age": "61",
+  "date": "31/07/23",
+  "doctor_name": null,
+  "hospital": "HEMAS HOSPITAL",
+  "medications": [
+    {
+      "line_id": 0,
+      "drug_name": "Voltaren",
+      "strength": null,
+      "frequency": "TDS",
+      "duration": "5 days",
+      "raw_line": "VOLIM2N 602 (C) TDS 1-1-1",
+      "confidence": 0.6,
+      "drug_name_raw": "VOLIM2N",
+      "drug_name_corrected": "Voltaren",
+      "frequency_raw": "TDS",
+      "duration_raw": null,
+      "candidates_considered": [],
+      "hybrid_scores": {},
+      "llm_confidence": 0.45,
+      "llm_reasoning": "The handwriting clearly says 'Voltaren' 50mg, with 'TDS' frequency and 'x 5' (5 days) duration.",
+      "needs_review": true,
+      "source_debug": [
+        {
+          "source": "rxnorm",
+          "status": "ok",
+          "candidate_count": 0,
+          "detail": "HTTP 200"
+        },
+        {
+          "source": "openfda",
+          "status": "ok",
+          "candidate_count": 0,
+          "detail": "HTTP 404 (no matches)"
+        },
+        {
+          "source": "rxnorm_spelling",
+          "status": "ok",
+          "candidate_count": 0,
+          "detail": "HTTP 200"
+        },
+        {
+          "source": "rxnorm",
+          "status": "ok",
+          "candidate_count": 0,
+          "detail": "HTTP 200"
+        },
+        {
+          "source": "rxnorm_spelling",
+          "status": "ok",
+          "candidate_count": 0,
+          "detail": "HTTP 200"
+        },
+        {
+          "source": "rxnorm",
+          "status": "ok",
+          "candidate_count": 0,
+          "detail": "HTTP 200"
+        },
+        {
+          "source": "rxnorm_spelling",
+          "status": "ok",
+          "candidate_count": 0,
+          "detail": "HTTP 200"
+        },
+        {
+          "source": "drugs.com",
+          "status": "network_error",
+          "candidate_count": 0,
+          "detail": "403 Client Error: Forbidden for url: https://www.drugs.com/search.php?searchterm=VOLIM2N"
+        },
+        {
+          "source": "1mg",
+          "status": "ok",
+          "candidate_count": 0,
+          "detail": "HTTP 200, selectors matched 0 elements"
+        }
+      ]
+    },
+    {
+      "line_id": 1,
+      "drug_name": "Celox-R",
+      "strength": "200 mg",
+      "frequency": "BD",
+      "duration": "5 days",
+      "raw_line": "CELOX-R 200 mg BD",
+      "confidence": 0.85,
+      "drug_name_raw": "CELOX-R",
+      "drug_name_corrected": "Celox-R",
+      "frequency_raw": "BD",
+      "duration_raw": null,
+      "candidates_considered": [],
+      "hybrid_scores": {},
+      "llm_confidence": 0.475,
+      "llm_reasoning": "The handwriting says 'Celox-R 200mg BD x 5', indicating twice daily for 5 days.",
+      "needs_review": true,
+      "source_debug": [
+        {
+          "source": "rxnorm",
+          "status": "ok",
+          "candidate_count": 2,
+          "detail": "HTTP 200"
+        },
+        {
+          "source": "openfda",
+          "status": "ok",
+          "candidate_count": 0,
+          "detail": "HTTP 404 (no matches)"
+        },
+        {
+          "source": "drugs.com",
+          "status": "skipped",
+          "candidate_count": 0,
+          "detail": "earlier sources found candidates; fallback not needed"
+        },
+        {
+          "source": "1mg",
+          "status": "skipped",
+          "candidate_count": 0,
+          "detail": "earlier sources found candidates; fallback not needed"
+        }
+      ]
+    },
+    {
+      "line_id": 2,
+      "drug_name": "Pantoprazole",
+      "strength": "1 g",
+      "frequency": "TDS",
+      "duration": "5 days",
+      "raw_line": "P MTMOTNS 1 g TDS",
+      "confidence": 0.4,
+      "drug_name_raw": "P MTMOTNS",
+      "drug_name_corrected": "Pantoprazole",
+      "frequency_raw": "TDS",
+      "duration_raw": null,
+      "candidates_considered": [
+        "P & S"
+      ],
+      "hybrid_scores": {
+        "P & S": 40.0
+      },
+      "llm_confidence": 0.425,
+      "llm_reasoning": "The handwriting is likely 'Pantoprazole 1g' (or similar) TDS x 5; while the drug name is stylized, it fits the context of a standard prescription.",
+      "needs_review": true,
+      "source_debug": [
+        {
+          "source": "rxnorm",
+          "status": "ok",
+          "candidate_count": 6,
+          "detail": "HTTP 200"
+        },
+        {
+          "source": "openfda",
+          "status": "ok",
+          "candidate_count": 0,
+          "detail": "HTTP 404 (no matches)"
+        },
+        {
+          "source": "drugs.com",
+          "status": "skipped",
+          "candidate_count": 0,
+          "detail": "earlier sources found candidates; fallback not needed"
+        },
+        {
+          "source": "1mg",
+          "status": "skipped",
+          "candidate_count": 0,
+          "detail": "earlier sources found candidates; fallback not needed"
+        }
+      ]
+    }
+  ],
+  "patient_name_confidence": 0.8,
+  "age_confidence": 0.9,
+  "_cost_usd": 0.00197125
+}

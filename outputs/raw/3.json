@@ -1,0 +1,45 @@
+{
+  "patient_name": "Gimhani",
+  "age": "63",
+  "date": null,
+  "doctor_name": "Dr. M. G. de Silva",
+  "hospital": "Hemas Hospital",
+  "medications": [
+    {
+      "line_id": 0,
+      "drug_name": "AUGMENTIN",
+      "strength": "625 mg",
+      "frequency": "TDS",
+      "duration": "5/7",
+      "raw_line": "AUGMENTIN 625 mg TDS x 5/7",
+      "confidence": 0.95
+    },
+    {
+      "line_id": 1,
+      "drug_name": "Xen-C",
+      "strength": null,
+      "frequency": "BD",
+      "duration": "1/52",
+      "raw_line": "Xen-C BD x 1/52",
+      "confidence": 0.85
+    },
+    {
+      "line_id": 2,
+      "drug_name": "PANMOL",
+      "strength": "1 g",
+      "frequency": "TDS",
+      "duration": "5/7",
+      "raw_line": "PANMOL 1 g TDS x 5/7",
+      "confidence": 0.85
+    }
+  ],
+  "patient_name_confidence": 0.8,
+  "age_confidence": 0.9,
+  "_metrics": {
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite",
+    "stage": "raw_extraction",
+    "latency_ms": 1953.53,
+    "image_path": "Handwritten Docs\\3.jpg"
+  }
+}
