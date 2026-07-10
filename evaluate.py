@@ -1,14 +1,3 @@
-#!/usr/bin/env python3
-"""
-Evaluate pipeline output against hand-labeled ground truth.
-
-Usage:
-    python evaluate.py --ground-truth ground_truth --predictions outputs/final --out outputs/eval_report.json
-
-Ground truth folder should contain one JSON file per image, named to match
-the image stem (e.g. ground_truth/1.json for Handwritten Docs/1.jpg),
-in the shape documented at the top of src/evaluation.py.
-"""
 from __future__ import annotations
 
 import argparse
@@ -20,10 +9,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from src.evaluation import evaluate_dataset
 
-# ---------------------------------------------------------------------------
-# EDIT THESE instead of typing flags in the terminal — then just run:
-#   python evaluate.py
-# ---------------------------------------------------------------------------
 GROUND_TRUTH_DIR = "ground_truth"
 PREDICTIONS_DIR = "outputs/final"
 REPORT_OUT = "outputs/eval_report.json"

@@ -1,8 +1,3 @@
-"""
-Step 5 — Build one batched payload across all medications in the prescription.
-Step 6 — One LLM call: Gemini looks at the image + the batched candidate
-          lists and picks per-line, or returns "NONE".
-"""
 from __future__ import annotations
 
 import json

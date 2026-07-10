@@ -1,26 +1,3 @@
-#!/usr/bin/env python3
-"""
-CLI entry point for the Gemini-extraction + RAG-correction prescription
-pipeline.
-
-Simplest usage — just point it at a folder of images. It automatically
-runs every step (raw extraction -> candidate retrieval -> hybrid scoring
--> LLM correction -> merge) for every image inside, and writes results to
-the outputs folder for you:
-
-    python main.py "Handwritten Docs"
-
-If you run it with no arguments at all, it defaults to a folder named
-"Handwritten Docs" in the current directory:
-
-    python main.py
-
-Other usage:
-    python main.py "Handwritten Docs" --out-dir results
-    python main.py --image path/to/one_file.jpg     # single-file mode
-    python main.py "Handwritten Docs" --use-scraped-sources
-    python main.py "Handwritten Docs" --no-semantic
-"""
 from __future__ import annotations
 
 import argparse
@@ -35,11 +12,6 @@ load_dotenv(Path(__file__).resolve().parent / ".env")
 
 from src.pipeline import run_pipeline, run_pipeline_on_folder
 
-# ---------------------------------------------------------------------------
-# EDIT THESE instead of typing flags in the terminal — then just run:
-#   python main.py
-# Anything you still pass on the command line overrides the value here.
-# ---------------------------------------------------------------------------
 IMAGE_FOLDER = "Handwritten Docs"
 OUT_DIR = "outputs"
 SCORE_THRESHOLD = 40.0

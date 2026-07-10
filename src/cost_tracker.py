@@ -1,17 +1,3 @@
-"""
-Cost tracking and projection.
-
-Real Gemini API responses include `usage_metadata` (prompt_token_count,
-candidates_token_count) — we use that whenever it's available, since it's
-the actual billed token count. For calls where the SDK doesn't return
-usage (e.g. the embedding endpoint), we fall back to a rough ~4-chars-per-
-token estimate and mark that event as `estimated: true` so it's clear
-which numbers are exact vs. approximate.
-
-Pricing is hardcoded from the published Gemini API rates as of Jul 2026
-(https://ai.google.dev/gemini-api/docs/pricing). Prices change — re-check
-that page and update GEMINI_PRICING if your numbers look stale.
-"""
 from __future__ import annotations
 
 import json
@@ -21,8 +7,6 @@ from typing import Dict, List, Optional
 
 # $ per 1,000,000 tokens.
 GEMINI_PRICING: Dict[str, Dict[str, float]] = {
-    # Gemini 2.5 family — deprecated for new API keys as of June 17, 2026.
-    # Kept here only so old cost logs / existing users on this tier still price correctly.
     "gemini-2.5-flash": {"input": 0.30, "output": 2.50},
     "gemini-2.5-flash-lite": {"input": 0.10, "output": 0.40},
     "gemini-2.5-pro": {"input": 1.25, "output": 10.00},
@@ -31,8 +15,6 @@ GEMINI_PRICING: Dict[str, Dict[str, float]] = {
     "gemini-3-flash": {"input": 0.50, "output": 3.00},
     "gemini-3.5-flash": {"input": 1.50, "output": 9.00},       # frontier-tier Flash, ~6x the cost of 3.1 Flash-Lite
     "gemini-3.1-pro-preview": {"input": 2.00, "output": 12.00},
-    # Embeddings have historically been free on the Gemini API — verify at
-    # the pricing link above before relying on this for a large-scale bill.
     "models/text-embedding-004": {"input": 0.00, "output": 0.00},
 }
 DEFAULT_PRICING = {"input": 0.25, "output": 1.50}  # fall back to gemini-3.1-flash-lite rates if model unknown

@@ -1,7 +1,3 @@
-"""
-Step 3 — Hybrid (lexical + semantic) scoring of each candidate.
-Step 4 — Filter by threshold, rank, keep top-3 per drug.
-"""
 from __future__ import annotations
 
 import os

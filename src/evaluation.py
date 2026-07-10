@@ -1,30 +1,3 @@
-"""
-Accuracy evaluation harness.
-
-Compares pipeline output JSON (outputs/final/<name>.json) against a
-ground-truth JSON of the same shape, and reports:
-
-  - field-level match rate, weighted higher for safety-critical fields
-    (drug_name, strength, frequency, duration) than patient_name/age
-  - hallucination rate: predicted a value the ground truth doesn't
-    support (either GT is null, or GT has a materially different value) —
-    this is tracked separately from "missed" (predicted null when GT had
-    a value), since fabricating is worse than leaving blank
-  - CER / WER on raw transcribed text, if ground truth includes it
-  - calibration: does llm_confidence / needs_review actually track
-    correctness on drug_name
-
-Ground truth JSON shape (only the fields you have — anything missing is
-just skipped for scoring, not penalized):
-
-{
-  "patient_name": "John Doe",
-  "age": "45",
-  "medications": [
-    {"drug_name": "Amoxicillin", "strength": "500 mg", "frequency": "TDS", "duration": "5 days", "raw_line": "Amoxicillin 500mg TDS x5/7"}
-  ]
-}
-"""
 from __future__ import annotations
 
 import json
@@ -35,8 +8,6 @@ from typing import Dict, List, Optional, Tuple
 from rapidfuzz import fuzz
 from rapidfuzz.distance import Levenshtein
 
-# Safety-critical fields weighted higher than patient_name/age, per the
-# evaluation brief ("weighted higher for safety-critical fields").
 FIELD_WEIGHTS = {
     "drug_name": 3.0,
     "strength": 2.0,
@@ -59,10 +30,6 @@ def _normalize(s: Optional[str]) -> Optional[str]:
     if s is None:
         return None
     s = str(s).strip().lower()
-    # Ground truth often writes "Brand (Generic Name)" while predictions
-    # only ever output the brand name — strip the parenthetical so
-    # "Augmentin" correctly matches "Augmentin (Amoxicillin-Clavulanate)"
-    # instead of scoring as a near-total mismatch / hallucination.
     s = re.sub(r"\s*\([^)]*\)", "", s).strip()
     return s or None
 

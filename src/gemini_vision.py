@@ -1,11 +1,3 @@
-"""
-Step 1 — Raw extraction from the prescription image using Gemini vision.
-
-This is the "first guess" pass. It deliberately transcribes drug names
-EXACTLY as handwritten (no auto-correction) so that Step 2-4 (RxNorm /
-openFDA / lexical+semantic scoring) has a clean, unbiased raw_guess to
-work with. Correction happens later, in correction.py (Step 6).
-"""
 from __future__ import annotations
 
 import json

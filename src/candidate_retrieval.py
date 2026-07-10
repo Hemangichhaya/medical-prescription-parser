@@ -1,20 +1,3 @@
-"""
-Step 2 — Retrieve drug-name candidates for each raw guess.
-
-Sources:
-  - RxNorm approximateTerm.json      (free, no key, official NLM API)
-  - RxNorm spellingsuggestions.json  (free, no key, official NLM API — retry fallback)
-  - openFDA ndc.json                 (free, no key, official FDA API)
-  - drugs.com / 1mg search pages     (best-effort HTML scraping, OPTIONAL)
-
-The scraped sources are off by default (see ENABLE_SCRAPED_SOURCES) because
-they are unofficial: no public API contract, subject to layout changes and
-each site's Terms of Service, and not needed for correctness — RxNorm +
-openFDA already cover the vast majority of US drug names. Turn them on only
-if you've checked the target site's ToS/robots.txt allow it for your use
-case. All scraping calls fail soft (return no candidates) rather than
-crashing the pipeline.
-"""
 from __future__ import annotations
 
 import re
@@ -36,7 +19,7 @@ ENABLE_SCRAPED_SOURCES = False  # flip to True (or pass use_scraped_sources=True
 
 class Candidate(NamedTuple):
     name: str
-    score: float  # 0-100, source-native score where available, else a neutral default
+    score: float  
     source: str
 
 
@@ -131,9 +114,6 @@ def openfda_candidates(term: str, max_entries: int = 20, debug_log: Optional[Lis
         for field in ("brand_name", "generic_name"):
             name = r.get(field)
             if name:
-                # openFDA has no native fuzzy score; treat every hit as a
-                # solid candidate (75) and let lexical/semantic scoring
-                # in scoring.py do the real ranking.
                 out.append(Candidate(name=name, score=75.0, source="openfda"))
     _log(debug_log, SourceAttempt("openfda", "ok", len(out), f"HTTP {resp.status_code}"))
     return out
@@ -160,9 +140,6 @@ def drugscom_candidates(term: str, max_entries: int = 10, debug_log: Optional[Li
         if name:
             out.append(Candidate(name=name, score=70.0, source="drugs.com"))
     out = out[:max_entries]
-    # Request succeeded but our CSS selectors matched nothing — usually
-    # means the page layout changed, or the site served a captcha/block
-    # page instead of real search results.
     detail = f"HTTP {resp.status_code}" if out else f"HTTP {resp.status_code}, selectors matched 0 elements"
     _log(debug_log, SourceAttempt("drugs.com", "ok", len(out), detail))
     return out

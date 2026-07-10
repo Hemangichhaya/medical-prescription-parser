@@ -1,11 +1,3 @@
-"""
-End-to-end pipeline: Gemini raw extraction -> RxNorm/openFDA candidate
-retrieval -> hybrid lexical+semantic scoring -> batched Gemini correction
--> final merged JSON.
-
-See README.md for the step-by-step breakdown. This file wires steps 1-8
-together; each step's real logic lives in its own module.
-"""
 from __future__ import annotations
 
 import copy
@@ -22,9 +14,6 @@ from src.gemini_vision import extract_raw_prescription
 from src.scoring import ScoredCandidate, rank_candidates
 
 LOW_CONFIDENCE_THRESHOLD = 0.6
-# If the LLM says "NONE" (or gives no usable decision) but the RAG hybrid
-# (lexical+semantic) score still found a strong match, trust that match over
-# a noisy raw OCR guess rather than falling straight back to raw_guess.
 HIGH_HYBRID_FALLBACK_THRESHOLD = 85.0
 
 
@@ -101,10 +90,6 @@ def run_pipeline(
     payload = build_batch_payload(medications, candidates_by_line)
 
     # ---- Step 6: one LLM call for correction ------------------------------
-    # Every line with a drug guess, a candidate list, or a frequency/duration
-    # guess goes through this call — frequency/duration were previously never
-    # re-checked after Step 1, so skipping lines here would leave them
-    # permanently unverified.
     lines_needing_llm = [
         p for p in payload if p["top_3_candidates"] or p["raw_frequency"] or p["raw_duration"]
     ]
@@ -129,19 +114,12 @@ def run_pipeline(
         picked_candidate = next((c for c in ranked if c.name == llm_pick), None)
 
         if picked_candidate is not None:
-            # LLM and RAG agree on a specific candidate — final confidence
-            # blends the LLM's verbal confidence with that candidate's own
-            # lexical+semantic hybrid score, so a confident-sounding pick
-            # the hybrid score itself considers weak doesn't get a free pass.
             corrected = picked_candidate.name
             llm_confidence = float(decision.get("llm_confidence", 0.0))
             combined_confidence = round(0.6 * llm_confidence + 0.4 * (picked_candidate.hybrid_score / 100), 4)
             reasoning = decision.get("reasoning")
             disagreement = False
         elif best_candidate is not None and best_candidate.hybrid_score >= HIGH_HYBRID_FALLBACK_THRESHOLD:
-            # LLM said "NONE" (or gave no usable decision) but the hybrid
-            # score still found a strong match — trust it over a noisy raw
-            # guess, but keep the line flagged since the two methods disagreed.
             corrected = best_candidate.name
             combined_confidence = round((best_candidate.hybrid_score / 100) * 0.7, 4)
             reasoning = (decision or {}).get(
@@ -150,12 +128,6 @@ def run_pipeline(
             )
             disagreement = True
         elif llm_pick and llm_pick.strip().upper() != "NONE":
-            # LLM rejected every retrieved candidate as implausible but gave
-            # a confident free-text reading of the handwriting instead (see
-            # correction.py prompt rule 1). Trust that over the raw garbled
-            # OCR guess — it's the model's best read of the actual image,
-            # just unverified against RxNorm/openFDA, so it stays flagged
-            # for review rather than treated as fully confirmed.
             corrected = llm_pick.strip()
             llm_confidence = float((decision or {}).get("llm_confidence", 0.0))
             combined_confidence = round(llm_confidence * 0.5, 4)  # discount: unverified against any database
@@ -169,9 +141,6 @@ def run_pipeline(
 
         needs_review = (not ranked) or disagreement or (combined_confidence < LOW_CONFIDENCE_THRESHOLD)
 
-        # Frequency/duration: use the LLM's re-read of the handwriting when
-        # it examined this line; explicit null means "illegible" and should
-        # override a noisy raw guess (missed is safer than hallucinated).
         frequency = decision.get("frequency_corrected") if decision is not None else raw_frequency
         duration = decision.get("duration_corrected") if decision is not None else raw_duration
 
@@ -187,7 +156,6 @@ def run_pipeline(
         med["source_debug"] = [asdict(a) for a in source_debug_by_line.get(line_id, [])]
 
         # ---- Step 8: drug_name, frequency, and duration are now all
-        # re-verified values; strength is left untouched from Step 1. -----
         med["drug_name"] = corrected
         med["frequency"] = frequency
         med["duration"] = duration
